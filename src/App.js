@@ -4,16 +4,17 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
-  state = {
-    persons: [
-      { name: 'Max', age: 27 },
-      { name: 'Sam', age: 24 },
-      { name: 'Tim', age: 52 }
-    ]
+  constructor(props){
+    super(props);
+    this.state = {
+      persons: [
+        { name: 'Max', age: 27 },
+        { name: 'Sam', age: 24 },
+        { name: 'Tim', age: 52 }
+      ]
+    }
   }
-
   switchNameHandler = () => {
-
     this.setState({
       persons: [
         { name: 'Maxi', age: 27 },
@@ -33,9 +34,9 @@ class App extends Component {
         </p>
           <p>Hello React!</p>
           <button className='btn' onClick={this.switchNameHandler}>Switch Name</button>
-          <Person name={this.persons[0].name} age={this.persons[0].age} />
-          <Person name={this.persons[1].name} age={this.persons[1].age} />
-          <Person name={this.persons[2].name} age={this.persons[2].age} />
+          <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+          <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
+          <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
           <a
             className="App-link"
             href="https://reactjs.org"
