@@ -4,7 +4,7 @@ import './App.css';
 import Person from './Person/Person';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       persons: [
@@ -34,9 +34,16 @@ class App extends Component {
         </p>
           <p>Hello React!</p>
           <button className='btn' onClick={this.switchNameHandler}>Switch Name</button>
-          <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-          <Person name={this.state.persons[1].name} age={this.state.persons[1].age} />
-          <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+          <Person
+            name={this.state.persons[0].name}
+            age={this.state.persons[0].age} />
+          <Person
+            name={this.state.persons[1].name}
+            age={this.state.persons[1].age}
+            click={this.switchNameHandler} /> {/*Passed method reference using props*/}
+          <Person
+            name={this.state.persons[2].name}
+            age={this.state.persons[2].age} />
           <a
             className="App-link"
             href="https://reactjs.org"
