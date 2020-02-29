@@ -2,7 +2,7 @@ import React from 'react';
 
 const person = (props) => {
 
-    const style = {
+    const styleS = {
         margin: '1em',
         padding: '1em',
         borderRadius: '.3em',
@@ -10,13 +10,14 @@ const person = (props) => {
     };
 
     const inputStyle = {
-        padding: '0.5em'
+        padding: '1em',
+        border: '0px'
     }
 
     return (
-        <div style={style}>
+        <div style={styleS}>
             <p onClick={props.click}>I'm a {props.name} and I'm {props.age} years old.</p>
-            <input type="text" onChange={props.changed} style={inputStyle} placeholder="Enter"/>
+            <input type="text" onChange={props.changed} style={inputStyle} placeholder="Enter" />
         </div>
     );
 };
