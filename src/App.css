@@ -28,9 +28,12 @@
   color: #61dafb;
 }
 
-.btn {
-  padding: 10px;
-  border: 0;
+.red {
+  color: #D32F2F;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
