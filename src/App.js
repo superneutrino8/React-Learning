@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
-import Radium from 'radium';
+import styled from 'styled-components';
 import Person from './Person/Person';
+
+const StyledButton = styled.button`
+      background-color: ${props => props.alt === 'true' ? '#D32F2F' : '#4CAF50'};
+      color: white;
+      border: 0px solid #D32F2F;
+      padding: 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: ${props => props.alt === 'true' ? '#c34c2c' : '#00C853'};
+        color: 'black';
+      }
+`;
 
 class App extends Component {
   constructor(props) {
@@ -62,13 +76,18 @@ class App extends Component {
 
   render() {
 
-    const btnStyle = {
-      background: '#4CAF50',
-      color: 'white',
-      border: '1px solid #D32F2F',
-      padding: '18px',
-      cursor: 'pointer'
-    }
+    // const btnStyle = {
+    //   background: '#4CAF50',
+    //   color: 'white',
+    //   border: '1px solid #D32F2F',
+    //   padding: '18px',
+    //   cursor: 'pointer',
+    //   ':hover': {
+    //     background: '#00C853',
+    //     color: 'black'
+    //   },
+    //   transition: 'all 0.2s ease'
+    // }
 
     const classes = [];
 
@@ -84,7 +103,7 @@ class App extends Component {
           <p className={classes.join(' ')}>Hello There, This is React</p>
           <button onClick={this.switchNameHandler.bind(this, 'Maximilian!!')}>Switch Name</button> {/*Passed method reference using bind*/}
           <br></br>
-          <button style={btnStyle} onClick={this.toggleViewFunc}>Toggle Persons</button> {/*Conditional View*/}
+          <StyledButton alt={this.state.toggleView.toString()} onClick={this.toggleViewFunc}>Toggle Persons</StyledButton> {/*Conditional View*/}
           {
             this.state.toggleView ?
               <div>
@@ -108,9 +127,6 @@ class App extends Component {
                     changed={(event) => this.nameChangedHandler(event, person.id)}
                   />
                 })}
-                {
-                  btnStyle.background = '#D32F2F'
-                }
               </div>
               : null
           }
