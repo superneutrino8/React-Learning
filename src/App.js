@@ -3,6 +3,7 @@ import './App.css';
 import styled from 'styled-components';
 import Person from './Person/Person';
 
+
 const StyledButton = styled.button`
       background-color: ${props => props.alt === 'true' ? '#D32F2F' : '#4CAF50'};
       color: white;
