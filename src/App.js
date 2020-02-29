@@ -3,7 +3,6 @@ import './App.css';
 import styled from 'styled-components';
 import Person from './Person/Person';
 
-
 const StyledButton = styled.button`
       background-color: ${props => props.alt === 'true' ? '#D32F2F' : '#4CAF50'};
       color: white;
@@ -102,7 +101,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p className={classes.join(' ')}>Hello There, This is React</p>
-          <button onClick={this.switchNameHandler.bind(this, 'Maximilian!!')}>Switch Name</button> {/*Passed method reference using bind*/}
+          <StyledButton onClick={this.switchNameHandler.bind(this, 'Maximilian!!')}>Switch Name</StyledButton> {/*Passed method reference using bind*/}
           <br></br>
           <StyledButton alt={this.state.toggleView.toString()} onClick={this.toggleViewFunc}>Toggle Persons</StyledButton> {/*Conditional View*/}
           {
