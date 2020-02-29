@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Radium from 'radium';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -60,7 +61,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     const btnStyle = {
       background: '#4CAF50',
       color: 'white',
@@ -71,10 +72,10 @@ class App extends Component {
 
     const classes = [];
 
-    if(this.state.persons.length <= 2)
+    if (this.state.persons.length <= 2)
       classes.push('red');
 
-    if(this.state.persons.length <= 1)
+    if (this.state.persons.length <= 1)
       classes.push('bold');
 
     return (
@@ -112,7 +113,7 @@ class App extends Component {
                 }
               </div>
               : null
-            }
+          }
           <br />
         </header>
       </div>
