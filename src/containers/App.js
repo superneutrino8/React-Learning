@@ -63,6 +63,8 @@ class App extends Component {
 
   render() {
 
+    console.log('App:', this);
+
     return (
       <div className="App">
         <header className="App-header">
@@ -85,7 +87,6 @@ class App extends Component {
           <br />
         </header>
       </div>
-      // React.createElement('div', {className: 'App'}, React.createElement('h1', null, `Hello React!!!!`))
     )
   };
 

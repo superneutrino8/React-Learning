@@ -18,6 +18,8 @@ const StyledButton = styled.button`
 
 const cockpit = (props) => {
 
+    console.log('Cockpit:', this);
+
     const classes = [];
 
     if (props.persons.length <= 2)
