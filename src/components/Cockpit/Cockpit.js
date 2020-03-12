@@ -17,6 +17,7 @@ const StyledButton = styled.button`
     }
 `;
 
+
 const Cockpit = (props) => {
 
     console.log('Cockpit:', this);
@@ -35,7 +36,7 @@ const Cockpit = (props) => {
 
     return (
         <div>
-            <p style={{fontFamily: 'Roboto'}} className={classes.join(' ')}>Hello There, This is React</p>
+            <p style={{ fontFamily: 'Roboto' }} className={classes.join(' ')}>Hello There, This is React</p>
             <StyledButton
                 onClick={props.switch.bind(this, 'Maximilian!!')}
             >
